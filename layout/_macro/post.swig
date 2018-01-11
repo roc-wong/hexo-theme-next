@@ -122,7 +122,17 @@
           {% endif %}
 
           {% if post.comments %}
-            {% if theme.facebook_comments_plugin.enable %}
+            {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.path }}" itemprop="commentCount"></span>
+                </a>
+              </span>
+            {% elseif theme.facebook_comments_plugin.enable %}
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
@@ -250,12 +260,13 @@
             </div>
           {% endif %}
 
+          <!--
           {% if post.description and (not theme.excerpt_description or not is_index) %}
               <div class="post-description">
                   {{ post.description }}
               </div>
           {% endif %}
-
+          -->
         </div>
       </header>
     {% endif %}
@@ -285,6 +296,11 @@
       {% endif %}
 
       {% if is_index %}
+        {% if post.images %}
+            <div class="out-img-topic">
+                <img src={{ post.images }} class="img-topic">
+            </div>
+        {% endif %}
         {% if post.description and theme.excerpt_description %}
           {{ post.description }}
           <!--noindex-->
