@@ -161,7 +161,7 @@ links:
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
 #avatar: /images/avatar.gif
-avatar: http://olml6iu96.bkt.clouddn.com/eagle.png
+avatar: https://raw.githubusercontent.com/roc-wong/images/master/eagle.png
 
 # Table Of Contents in the Sidebar
 toc:
@@ -849,8 +849,8 @@ images: images
 ### customer settings
 
 reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
-wechatpay: http://olml6iu96.bkt.clouddn.com/WX20170219-233910@2x.png
-alipay: http://olml6iu96.bkt.clouddn.com/WX20170219-233931@2x.png
+wechatpay: https://raw.githubusercontent.com/roc-wong/images/master/WX20170219-233910@2x.png
+alipay: https://raw.githubusercontent.com/roc-wong/images/master/WX20170219-233931@2x.png
 
 ### end
 
